@@ -191,6 +191,7 @@ aside h3 {
 
 blockquote {
     width: 80%;
+    margin: 1vh auto;
     padding: 10px;
     border-left: 25px solid steelblue;
     border-top: 3px solid steelblue;
@@ -213,7 +214,6 @@ blockquote:hover {
 
 ==================================================*/                       
 footer {
-    /* clear: both; */
     background-color: steelblue;
     padding: 15px 0;
     border-radius: 0 0 7px 7px;
@@ -246,18 +246,19 @@ footer p {
     }
 
     section {
-        flex: 0 1 95%;
+        flex: 0 1 55%;
         
     }
 
     #leftcol {
         order: 3;
         flex: 0 1 80%;
+        margin: 2vh 0;
         
     }
 
     #rightcol {
-        flex: 1 1 95%;
+        flex: 0 1 30%;
     }
     header, footer {
         border-radius: 0;
@@ -266,25 +267,35 @@ footer p {
 }
 
 @media only screen and (max-width: 767px) {
-    #nav_menu {
-        display: none;
-    }
-    #mobilemenu {
-        display: block;
-    }
-    .slicknav_menu {
-        background-color: steelblue;
-    }
-    #rightcol {
-        border-left: none;
-    }
-    section, aside, #rightcol {
-        /* float: none; */
-        /* width: 95%; */
+
+    #rightcol, section {
+        flex: 0 1 95%;
+
     }
 }
 
 @media only screen and (max-width: 479px) {
-    
-}
 
+    #nav_menu ul {
+        flex-direction: column;
+    }
+
+    #nav_menu ul li {
+        text-align: center;
+        width: 100%;
+    }
+
+    #nav_menu ul li:first-of-type {
+        display: none;
+    }
+
+    #rightcol {
+        flex: 0 1 100%;
+        width: 100%;
+        margin: 0;
+        padding: 2vw;
+        border: none;
+        border-radius: 0%;
+
+    }
+}
